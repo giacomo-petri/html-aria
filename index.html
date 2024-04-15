@@ -431,7 +431,7 @@
           ... 
           &lt;p>&lt;/p>
           
-          &lt;!-- Use a span are allowed in p elements! -->
+          &lt;!-- Instead of a div, use a span. Spans are allowed descendants of p elements! -->
           &lt;p>
             ... &lt;span role=link tabindex=0>...&lt;/span> ...
           &lt;/p>
@@ -1342,7 +1342,7 @@
             <td>
               <p>
                 Roles:
-                or <a href="#index-aria-none">`none`</a>,
+                <a href="#index-aria-none">`none`</a>,
                 <a href="#index-aria-presentation">`presentation`</a>
                 or <a href="#index-aria-search">`search`</a>. (<code><a href="#index-aria-form">form</a></code> is also allowed, but NOT RECOMMENDED.)
               </p>
@@ -1459,7 +1459,7 @@
                 (If not a descendant of an `article`, `aside`, `main`, `nav`
                 or `section` element, or an element with `role=article`, `complementary`,
                 `main`, `navigation` or `region`,
-                then <code>role=<a href="#index-aria-contentinfo">contentinfo</a></code>
+                then <code>role=<a href="#index-aria-banner">banner</a></code>
                 is also allowed, but NOT RECOMMENDED.
                 Otherwise, <code>role=<a href="#index-aria-generic">generic</a></code>
                 is also allowed, but SHOULD NOT be used.)
@@ -1825,7 +1825,7 @@
             <td>
               <div class="proposed addition">
                 <p>
-                  Roles:
+                  The following roles are allowed, but are NOT RECOMMENDED:
                   <a href="#index-aria-button">`button`</a>,
                   <a href="#index-aria-checkbox">`checkbox`</a>,
                   <a href="#index-aria-gridcell">`gridcell`</a>,
@@ -1844,6 +1844,10 @@
                 <p>
                   <a data-cite="wai-aria-1.2#global_states">Global `aria-*` attributes</a> 
                   and any `aria-*` attributes applicable to the allowed roles.
+                </p>
+                <p>
+                  If possible, authors SHOULD consider using a different HTML element which allows the specified role,
+                  such as the `button` element.
                 </p>
               </div>
             </td>
@@ -1980,7 +1984,8 @@
                   and any `aria-*` attributes applicable to the allowed roles.
                 </p>
                 <p>
-                  If possible, authors SHOULD consider using a different HTML element which allows the specified role.
+                  If possible, authors SHOULD consider using a different HTML element which allows the specified role,
+                  such as the `button` element.
                 </p>
               </div>
             </td>
@@ -2035,7 +2040,8 @@
                   and any `aria-*` attributes applicable to the allowed roles.
                 </p>
                 <p>
-                  If possible, authors SHOULD consider using a different HTML element which allows the specified role.
+                  If possible, authors SHOULD consider using a different HTML element which allows the specified role,
+                  such as the `button` element.
                 </p>
               </div>
             </td>
@@ -2250,7 +2256,7 @@
                   if the parent list element has an implicit or explicit `list` role.
                 </p>
                 <p>
-                  Otherwise, <a><strong>any `role`</strong></a> if the parent list item does not expose an implicit or explicit `list` role.
+                  Otherwise, <a><strong>any `role`</strong></a> if the parent list element does not expose an implicit or explicit `list` role.
                 </p>
                 <p class="note">
                   See <a href="#el-ul">`ul`</a>, <a href="#el-ol">`ol`</a>, or
